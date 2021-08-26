@@ -26,12 +26,14 @@ public class GuardaRoupa {
             for(Roupa roupaEntry1 : roupaEntry.getValue()){
                 System.out.println("Gaveta "+roupaEntry.getKey()+" Marca-> "+roupaEntry1.getMarca());
                 System.out.println("Gaveta "+roupaEntry.getKey()+" Modelo-> "+roupaEntry1.getModelo());
-                System.out.println("---------------------------------------------------------------");
+                System.out.println("---------------------**************************---------------------");
             }
         }
     }
 
     public List<Roupa> devolverRoupas(Integer codigo){
-        return guardaRoupa.get(codigo);
+        List<Roupa> listaRoupas = guardaRoupa.get(codigo);
+        guardaRoupa.remove(codigo);
+        return listaRoupas;
     }
 }

@@ -33,9 +33,11 @@ public class Main {
 
         guardaRoupa.mostrarRoupas();
 
-        List<Roupa> devolucao = guardaRoupa.devolverRoupas(1);
-        for (Roupa item: devolucao) {
-            System.out.println("Retirada de itens do guarda-roupa:"+ item.getMarca()+"---"+item.getModelo());
-        }
+        guardaRoupa.devolverRoupas(1);
+
+        System.out.println("---------------------*************Restou no guarda-roupa*************---------------------");
+
+        guardaRoupa.mostrarRoupas();
+
     }
 }
